@@ -1,0 +1,87 @@
+<ion-content>
+    <ion-grid style="padding: 30px 20px 30px 20px ">
+    <ion-row class="ion-justify-content-evenly">
+
+      <ion-col size="5.5"> 
+        <ion-grid> 
+
+          <ion-row>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-text class="heading">Mobiles</ion-text>
+                </ion-row>
+                
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Smart Phones')">Smart Phones</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Basic Phones')">Basic Phones</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Mobile Covers')">Mobile Covers</ion-row>
+
+                </ion-grid>
+    
+              </ion-col>
+            </ion-row>  
+            
+            <ion-row>
+              <ion-col>
+                <ion-grid>
+                  <ion-row>
+                    <ion-text class="heading">Cameras</ion-text>
+                  </ion-row>
+                  
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','DSLRs')">DSLRs</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','CCTV Cameras')">CCTV Cameras</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Tripods')">Tripods</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Camera Lenses')">Camera Lenses</ion-row>
+  
+                  </ion-grid>
+      
+                </ion-col>
+              </ion-row>  
+
+        </ion-grid>
+      </ion-col>
+
+      <ion-col size="5.5">
+        <ion-grid> 
+
+          <ion-row>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-text class="heading">Audio</ion-text>
+                </ion-row>
+                
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Headphones')">Headphones</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Speakers')">Speakers</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Electronics','Earphones')">Earphones</ion-row>
+
+                </ion-grid>
+    
+              </ion-col>
+            </ion-row>  
+            
+            <ion-row>
+              <ion-col>
+                <ion-grid>
+                  <ion-row>
+                    <ion-text class="heading">Laptops</ion-text>
+                  </ion-row>
+                  
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Gaming Laptops')">Gaming Laptops</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Budget Laptops')">Budget Laptops</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Keyboards')">Keyboards</ion-row>
+                  <!-- <ion-row class="subcats" (click)="exploreSubcat('Electronics','Soft Toys')">Hard Drives</ion-row> -->
+                  <ion-row class="subcats" (click)="exploreSubcat('Electronics','Mouse')">Mouse</ion-row>
+  
+                  </ion-grid>
+      
+                </ion-col>
+              </ion-row>  
+
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+   </ion-grid>
+
+</ion-content> 
+

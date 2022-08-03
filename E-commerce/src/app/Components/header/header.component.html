@@ -1,0 +1,32 @@
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang&display=swap" rel="stylesheet">
+<ion-toolbar style="--background:#000000; box-shadow: 2px 2px 2px #646464; padding-left: 20px; padding-right: 50px; padding-bottom: 0px;">
+  
+  <ion-buttons slot="primary">  
+      <ion-icon name="heart-outline" routerLink="/wishlist" style="color: #ffffff; font-size: 30px;">
+      </ion-icon>
+      <ion-badge id="wishlist-badge">{{wishlistCtr()}}</ion-badge>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+      <ion-icon name="bag-outline" routerLink="/cart" style="padding-left: 10px; font-size: 30px; color: white;"></ion-icon>
+      <ion-badge id="notifications-badge">{{retcounter()}}</ion-badge>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+      <ion-icon name="person-circle-outline" (click)="createProfilePopover($event)" style="font-size: 35px; padding-left: 10px; color: white;"></ion-icon>
+  </ion-buttons>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" style="padding-top: 15px;">
+        <ion-searchbar mode='md' showCancelButton="focus" style="width: 300px; height: 10px; --border-radius: 50px; padding-top: 12px;"></ion-searchbar>
+      </ion-col>
+      <ion-col size="2.4" style="padding: 0px 0px 2px 175px;">
+        <img src="../../assets/images/Picture2.png" style="height: 50px; width: 50px;" routerLink="/home-page">
+      </ion-col >
+      <ion-col size="3" style="padding-top: 12px;">
+        <ion-text style="color: #ffffff; font-family: Fahkwang; font-size: 20px;" routerLink="/home-page">EVERMUSE</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar>

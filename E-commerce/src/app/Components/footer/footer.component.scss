@@ -1,0 +1,60 @@
+.input {
+    background: #fff;
+    color: #060c22;
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 9px 100px 9px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    float: left;
+  }
+
+  .cards {
+    height: 35px;
+    width: 70px;
+  }
+  
+  .button {
+    border: 0;
+    padding: 9px 25px;
+    cursor: pointer;
+    background: #f82249;
+    color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 16px;
+    border-radius: 50px;
+  }
+  
+  .heading {
+    color: rgb(248, 82, 82);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    float: left;
+    font-size: 18px;
+    // text-shadow: 2px 2px 2px rgba(74, 42, 52, 0.5);
+  }
+  
+  .text{
+    color: rgba(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    float: left;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .link{
+    color: rgba(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    float: left;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .link:hover {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+

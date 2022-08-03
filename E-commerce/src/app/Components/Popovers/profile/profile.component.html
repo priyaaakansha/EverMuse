@@ -1,0 +1,69 @@
+<ion-grid id ='usr' class="ion-padding">
+  <ion-row id='usernm'></ion-row>
+  <hr>
+  <ion-row class="text" (click)="orders()">
+    Your Orders
+  </ion-row>
+  <ion-row class="text" (click)="notifications()">
+    <ion-col style="padding-left: 0px;">
+      Notifications
+      <ion-badge style="background-color: #eb2963c9; float: right;">{{counter}}</ion-badge>
+    </ion-col>
+  </ion-row>
+  <ion-row class="text" (click)="helpCenter()">
+    Help Center
+  </ion-row>
+  <hr>
+  <ion-row class="text" (click)="profile()">
+    Your Profile
+  </ion-row>
+  <ion-row class="text" (click)="addresses()">
+    Saved Addresses
+  </ion-row>
+  <hr>
+  <ion-row><ion-text class="text" (click)="contact()">Contact Us</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="faq()">FAQ</ion-text></ion-row>
+      <ion-row> <ion-text class="text" (click)="tandc()">Terms & Conditions</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="return()">Return & Exchange</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="cancellation()">Cancellation</ion-text></ion-row> 
+  <hr>
+  <ion-row>
+    <ion-col size="6" style="padding-left: 0px;">
+    <ion-button class="secButton" shape="round" fill="outline" (click)="logout()" routerLink='/home-page'>Logout</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid id='gst' class="ion-padding">
+    <ion-row id='wlcm'></ion-row>
+    <ion-row>
+      <ion-col size="7" style="padding-left: 0px;">
+        <ion-button style="--padding-bottom: 0px; --padding-top: 0px;" class="secButton" fill="outline" (click)="login()">Login/Signup</ion-button>
+      </ion-col>
+    </ion-row> 
+  <hr>
+  <ion-row class="text" (click)="login()">
+    Your Orders
+  </ion-row>
+  <ion-row class="text" (click)="login()">
+    Notifications
+  </ion-row>
+  <ion-row class="text" (click)="helpCenter()">
+    Help Center
+  </ion-row>
+  <hr>
+  <ion-row class="text" (click)="login()">
+    Your Profile
+  </ion-row>
+  <ion-row class="text" (click)="login()">
+    Saved Addresses
+  </ion-row>  
+  <hr>
+
+  <ion-row><ion-text class="text" (click)="contact()">Contact Us</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="faq()">FAQ</ion-text></ion-row>
+      <ion-row> <ion-text class="text" (click)="tandc()">Terms & Conditions</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="return()">Return & Exchange</ion-text></ion-row>
+      <ion-row><ion-text class="text" (click)="cancellation()">Cancellation</ion-text></ion-row> 
+</ion-grid>
+

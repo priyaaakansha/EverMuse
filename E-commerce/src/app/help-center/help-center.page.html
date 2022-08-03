@@ -1,0 +1,71 @@
+<ion-content>
+
+  <app-header></app-header>
+  <ion-row>
+    <ion-col size="7">
+      <ion-row style="padding-top: 20px; padding-left: 20px">
+        <ion-text style="color:#000000;font-family: Montserrat, sans-serif; padding-top: 20px; font-size: 20px; font-weight: 600;">
+          Help Center
+        </ion-text>
+      </ion-row>
+    
+      <ion-row style="padding-left: 20px;">
+        <p style="color:#808080;font-family: Montserrat, sans-serif;">We are here to help you!</p>
+      </ion-row>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8" >
+          <ion-card style="border: 1px solid">
+            <ion-card-content>
+              <ion-row>
+                <ion-col size="2.5" >
+                  <img src = "{{orders}}" style="height: 80px;">
+                </ion-col>
+                <ion-col size="6" >
+                  <ion-row style="padding-top:15px">
+                    <ion-text style="color: black;font-family: Montserrat, sans-serif;">Track, Cancel, Return/Exchange</ion-text>
+                  </ion-row>
+                  <ion-row>
+                    <ion-text style="color:#808080;font-family: Montserrat, sans-serif;">Manage your purchases</ion-text>
+                  </ion-row>
+                </ion-col>
+                <ion-col size="3" style="align-items: center; padding-top: 20px;">
+                  <ion-button type="submit"
+                    style="--background:#1AAC66; font-family: Montserrat, sans-serif;padding-left: 20px; ">Orders</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+          <br>
+        </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="8">
+        <ion-card style="border: 1px solid;">
+          <ion-row>
+            <ion-col size="8" style="padding: 35px 20px 30px 20px">
+          <ion-text style="font-size:25px; color: black;font-family: Montserrat, sans-serif;">FAQ</ion-text>
+              </ion-col>
+              <ion-col size="4">
+                <img src="{{faq}}" style="height: 100px; width: 120px;">
+              </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+     
+    </ion-grid>
+    </ion-col>
+
+    <ion-col size="5" style="padding: 50px 200px 50px 0px">
+      <img src = "{{main}}">
+    </ion-col>
+  </ion-row>
+
+  
+
+<app-footer></app-footer>
+ 
+</ion-content>

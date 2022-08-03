@@ -1,0 +1,10 @@
+.clear{
+    float: right; 
+    color: #f85686; 
+    cursor: pointer;
+}
+.clear:hover{
+    font-weight: 600;
+    transform: scale(1.07);
+    // text-decoration: underline;
+}

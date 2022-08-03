@@ -1,0 +1,63 @@
+<ion-content class="ion-content">
+  <ion-grid >
+
+    <ion-row class="ion-justify-content-evenly" >
+      <ion-col size="0.55">
+        <ion-text>Cart <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="1.37">
+        <ion-text>Shipping Address <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="0.85">
+        <ion-text>Payment <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="1.12">
+        <ion-text>Order Placed <ion-icon name="radio-button-on-outline" class="icon"></ion-icon></ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-padding">
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-card class="card">
+          <ion-card-content>
+              <ion-row class="ion-justify-content-center">
+                <ion-icon style="color: #ffffff; font-size: 45px;" name="happy"></ion-icon>
+              </ion-row>
+              
+              <ion-row class="ion-justify-content-center" style="color: #ffffff; font-size: 18px; padding-top: 15px;">
+                <ion-text>Order ID: #{{order.id}}</ion-text>
+              </ion-row>
+                
+              <ion-row class="ion-justify-content-center" style="color: #ffffff; font-size: 18px; padding-top: 15px;">
+                <ion-text>Your order has been placed successfully.</ion-text>
+              <br>
+
+              <ion-text>Thank you for shopping with us. Have a great day!</ion-text>
+              </ion-row>
+             
+              <ion-row> 
+                <ion-col style="padding: 48px 50px 20px 50px">
+                  <ion-button class="login-button" (click)="orderSummary()">View Order Details</ion-button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row style="color: #fff; font-size: 18px;" class="ion-justify-content-center" >
+                <ion-row class="router">
+                  <ion-icon name="arrow-back-outline" style="padding-right: 5px; padding-top: 2.5px;"></ion-icon>
+                  <ion-text routerLink="/home-page">Back to Home</ion-text>
+                </ion-row>
+              </ion-row>
+
+          </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+  </ion-grid>
+</ion-content>

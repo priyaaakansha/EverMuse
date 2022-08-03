@@ -1,0 +1,24 @@
+.ion-padding{
+    --ion-padding: 25px;
+}
+
+.secButton {
+    color: #eb2963;
+    --border-color: #eb2963;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    --border-width: 0.1px;
+    --background: #fff;
+    --border-radius: 5px;
+    --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px;
+    --background-activated: rgba(0, 0, 0, 0.25);
+}
+
+.text:hover{
+    font-weight: 550;
+    color: #eb2963;
+    cursor: pointer;
+}

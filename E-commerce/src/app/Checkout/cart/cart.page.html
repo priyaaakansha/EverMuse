@@ -1,0 +1,127 @@
+<ion-content>
+
+  <app-header></app-header>
+
+  <ion-grid style="padding: 0px;">  
+      <ion-row style="height: 30px; background-color: rgb(253, 192, 210, 0.5);" class="ion-justify-content-evenly">
+        <ion-col size="0.55">
+          <ion-text>Cart <ion-icon name="radio-button-on-outline" class="icon"></ion-icon></ion-text>
+        </ion-col>
+  
+        <ion-col size="1.37">
+          <ion-text>Shipping Address <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+        </ion-col>
+  
+        <ion-col size="0.85">
+          <ion-text>Payment <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+        </ion-col>
+  
+        <ion-col size="1.12">
+          <ion-text>Order Placed <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+        </ion-col></ion-row>
+      </ion-grid>
+
+<ion-grid  *ngIf="!cartNull()">
+  <ion-row style="padding-left: 58px; padding-bottom: 0px; padding-top: 5px;">
+    <ion-text style="font-size: 17px; color: #000000;"><h5>Cart Item(s)- {{counter}}</h5></ion-text>
+  </ion-row>
+
+  <ion-grid style="padding-top: 0px;">
+    <ion-row style="padding-left: 30px;">
+        <ion-col size="7.5" style="padding-top: 0px;">
+
+          <ion-row class="ion-justify-content-evenly">
+      
+          <ion-col size="12" *ngFor="let item of items">
+            <ion-card class="ion-padding">
+            <ion-grid>
+      
+            <ion-row>
+              <ion-col size="4.8">
+                <img src="{{item.image}}" style="height: 250px; width: 250px; border-radius: 10px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);">
+              </ion-col>
+      
+              <ion-col style="padding-top: 60px;">
+                <ion-row style="padding-left: 10px; color: rgbs(0,0,0,0.5); font-weight: 600;"><ion-text>{{item.company}}</ion-text></ion-row>
+                <ion-row style="padding-left: 10px"><ion-text>{{item.title}}</ion-text></ion-row>
+                <ion-row style="padding-left: 10px"><ion-text>{{item.price | currency: 'INR'}}</ion-text></ion-row>
+                <br>
+                <ion-row style="padding-left: 10px"><ion-text>Color: {{item.color}}</ion-text></ion-row>
+                <ion-row style="padding-left: 10px"><ion-text>Size: {{item.size}}</ion-text></ion-row>
+                <br>
+                <ion-row style="padding-left: 2px; padding-right: 0px;">
+                  <ion-col >
+                    <ion-text ><ion-icon (click)='removeAlert(item)' name="trash-outline" style="float: left; padding-right: 3px; padding-top: 2px; color: rgbs(0,0,0,0.5); font-size: 15px; font-weight: 1000; "></ion-icon> Remove Item</ion-text>
+                  </ion-col>
+      
+                  <ion-col>
+                    <ion-text><ion-icon (click)="moveAlert(item)" name="heart" style="float: left; padding-right: 4px; padding-top: 2px; color: #eb2963; font-size: 16px; font-weight: 600;"></ion-icon> Move to Wishlist</ion-text>
+                  </ion-col>
+                </ion-row>
+      
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        </ion-col>
+
+      <ion-col size="4.2" style="padding-top: 6px; padding-bottom: 100px;">
+            <ion-card class="ion-padding">
+             <ion-grid>
+               <ion-row style="padding-left: 2px; padding-bottom: 10px;" *ngIf='!cartNull()'>
+                 <ion-text style="font-size: 17px; font-weight: 600; color: #000000;">Total Amount</ion-text>
+               </ion-row>
+               <ion-row>
+                 <ion-col>
+                   <ion-text style="float: left;">Item(s) Total:  </ion-text>
+                   <ion-text style="float: right;">{{sum | currency: 'INR'}}</ion-text>
+                 </ion-col>
+               </ion-row>
+       
+               <ion-row>
+                 <ion-col>
+                   <ion-text style="float: left;">Delivery Charges: </ion-text>
+                   <ion-text style="float: right;" *ngIf='delivery'>{{150 | currency: 'INR'}}</ion-text>
+                   <ion-text style="float: right;" *ngIf='!delivery'>Free</ion-text>
+                   <ion-item-divider></ion-item-divider>
+                 </ion-col>
+               </ion-row>
+       
+               <ion-row>
+                 <ion-col>
+                   <ion-text style="float: left;">Payable Amount</ion-text>
+                   <ion-text style="float: right;">{{subtotal | currency: 'INR'}}</ion-text>
+                 </ion-col>
+               </ion-row>
+       
+               <ion-row style="padding-top: 0px;">
+                 <ion-col style="padding-top: 0px;">
+                   <ion-text style="float: left; font-size: 10px;">(Inclusive of all taxes)</ion-text>
+                 </ion-col>
+               </ion-row>
+                             
+             </ion-grid>
+            </ion-card>
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 30px;">
+                <ion-button class="login-button" type="submit" (click)="setPrice()" routerLink="/address">Proceed to Checkout</ion-button>
+              </ion-col>
+            </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-grid>
+  <ion-content *ngIf='cartNull()'>
+    <ion-grid>
+      <ion-col size='12'>
+        Cart Empty!
+      </ion-col>
+    </ion-grid>
+  </ion-content>
+
+  <app-footer></app-footer>
+</ion-content>

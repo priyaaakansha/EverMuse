@@ -1,0 +1,185 @@
+  <ion-grid style="padding: 0px">
+    <ion-row style="background-color: #000000; height: 120px;" class="ion-justify-content-evenly">
+      <ion-col style="padding-top: 20px; padding-left: 70px;">
+        <ion-grid>
+          <ion-row style="color: #eb2963; padding-bottom: 5px;">
+            <b>Hear it first!</b>
+          </ion-row>
+          <ion-row>
+            <ion-text style="color: #ffffff">Subscribe to our newsletter to get latest updates on our events, collections, discounts, and plans</ion-text>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+  
+      <ion-col size="8" style="padding-top: 30px; padding-left: 380px;">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="7">
+            <div>
+              <input type="text" class="input" id='email' [(ngModel)]="email" placeholder='Enter your email'>
+            </div>
+            <div id='valid' style="color: white;"></div>
+          </ion-col>
+  
+          <ion-col size="3.7">
+            <div>
+              <button class="button" type="submit" (click)='onSubmit()'>Subscribe</button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
+  
+      <ion-grid style="background-color: #ffffff;">
+      <ion-row style=" height: 300px; padding-top: 20px; padding-left: 0px; padding-right: 0px;" class="ion-justify-content-evenly">
+        <ion-col size="2" style="padding-top: 5px; ">
+          <ion-grid>
+  
+            <ion-row style="padding-bottom: 15px; ">
+              <ion-text class="heading">
+                Contact Us
+              </ion-text>
+            </ion-row>
+  
+            <ion-row style="padding-bottom: 5px;">
+              <ion-text class="heading" style="font-size: 15px; font-weight: 550; color: #4b4a4a;">
+                Customer Support
+              </ion-text>
+            </ion-row>
+  
+            <ion-row>
+            <ion-text class="text">
+              customer@xyz.com
+            </ion-text>
+            </ion-row>
+            <br>
+  
+            <ion-row style="padding-bottom: 5px;">
+              <ion-text class="heading" style="font-size: 15px; font-weight: 550; color: #4b4a4a;">
+                Toll Free Helpline
+              </ion-text>
+            </ion-row>
+  
+            <ion-row>
+            <ion-text class="text">
+              011 657 657
+            </ion-text>
+            </ion-row>
+            
+          </ion-grid>
+          </ion-col>
+
+          <ion-col size="2" style="padding-top: 5px; ">
+            <ion-grid>
+    
+              <ion-row style="padding-bottom: 15px; ">
+                <ion-text class="heading">
+                  Address
+                </ion-text>
+              </ion-row>
+
+              <ion-row>
+                <ion-text class="text">
+                  A39, EverMuse Tower, Rosewood Avenue Street, INA, New Delhi - 122014, India
+                </ion-text>
+                </ion-row>
+          </ion-grid>
+        </ion-col>
+            
+          <ion-col size="2">
+            <ion-grid>
+           
+              <ion-row style="padding-bottom: 5px;">
+                <ion-title class="heading">
+                  Follow Us On
+                </ion-title>
+              </ion-row>
+           
+              <ion-row style="padding-left: 20px;">
+                <ion-fab-button size="small" color="light" (click)="openFacebook()"><ion-icon style="color: #000000; font-size: 20px;" name="logo-facebook" ></ion-icon></ion-fab-button>
+              </ion-row>
+           
+              <ion-row style="padding-left: 20px;">
+                <ion-fab-button size="small" color="light" (click)="openInsta()">
+                  <ion-icon style="color: #000000; font-size: 20px;" name="logo-instagram"></ion-icon>
+                </ion-fab-button>
+              </ion-row>
+           
+              <ion-row style="padding-left: 20px;">
+                <ion-fab-button size="small" color="light" (click)="openYoutube()">
+                  <ion-icon style="color: #000000; font-size: 20px;" name="logo-youtube"></ion-icon>
+                </ion-fab-button>
+              </ion-row>
+           
+              <ion-row style="padding-left: 20px;">
+              <ion-fab-button size="small" color="light" (click)="openPinterest()">
+                <ion-icon style="color: #000000; font-size: 20px;" name="logo-pinterest"></ion-icon>
+              </ion-fab-button>
+              </ion-row>
+            </ion-grid>
+          </ion-col>          
+
+          <ion-col size="2" style="padding-top: 5px;">
+            <ion-grid>
+              <ion-row style="padding-bottom: 15px;">
+                <ion-text class="heading">
+                 Helpful Links
+                </ion-text>
+              </ion-row>
+  
+              <ion-row style="padding-bottom: 5px;">
+              <ion-text class="link" routerLink="/faq">
+                FAQ
+              </ion-text>
+              </ion-row>
+
+              <ion-row style="padding-bottom: 5px;">
+                <ion-text class="link" routerLink="/help-center">
+                  Help Center
+                </ion-text>
+                </ion-row>
+  
+              <ion-row style="padding-bottom: 5px;">
+                <ion-text class="link" routerLink="/tandc">
+                  Terms & Conditions
+                </ion-text>
+                </ion-row>
+  
+                <ion-row style="padding-bottom: 5px;">
+                  <ion-text class="link" routerLink="/return">
+                    Return & Exchange 
+                  </ion-text>
+                </ion-row>
+  
+                <ion-row style="padding-bottom: 5px;">
+                  <ion-text class="link" routerLink="/cancellation">
+                    Cancellation
+                  </ion-text>
+                </ion-row>
+  
+            </ion-grid>
+            </ion-col>
+    </ion-row>
+  
+    <ion-row style="padding-bottom: 15px; padding-top: 10px;">
+      <ion-col size="4.9" style=" padding-left: 510px; padding-right: 0px; padding-top: 5px;">
+        <ion-icon style="font-size: 30px; color: #000000;" name="sync-outline"></ion-icon>
+      </ion-col>
+      <ion-col style="padding-top: 12px;">
+        <ion-text style="color: #000000;">Easy 15 days return & exchange on all orders <ion-text style="color: red;">*</ion-text></ion-text>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  
+    <ion-grid style="padding: 0px">
+      <ion-row style="background-color: #5a5a5a;  height:50px; padding: 5px 200px 5px 580px" class="ion-justify-content-evenly">
+        <ion-col size="0.8" style="padding-top: 8px; padding-left: 12px;">
+          <img src="../../assets/images/copyyy.png" style="height: 20px; width: 20px;">
+        </ion-col>
+        <ion-col style="padding-top: 10px">
+            <ion-text style="color: #ffffff; font-size:15px;">2021 XYZ Design Pvt. Ltd</ion-text>
+        </ion-col>
+      </ion-row>
+  </ion-grid>

@@ -1,0 +1,60 @@
+// .inputs {
+//     color: rgba(0, 0, 0, 0.6);
+//     width: 100%;
+//     font-size: 17px;
+//     font-weight: 400;
+//     font-family: "Montserrat", sans-serif;
+//     padding: 0px 30px 0px 30px;
+//   }
+
+//   .inputs2 {
+//     border-radius: 15px;
+//     text-align: left;
+//     background-color:#FFEAF0;
+//     width: 100%;
+//     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+//   }
+
+//   .primButton {
+//     color: #ffffff;
+//     font-weight: 600;
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 20;
+//     width: 100%;
+//     --background: #eb2963;
+//     --border-radius: 10px;
+//     --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+//     padding-right: 30px;
+//     padding-left: 30px;
+//   }
+
+.inputs {
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 30px 0px 30px;
+}
+
+.inputs2 {
+  border-radius: 15px;
+  text-align: left;
+  background-color:#fff;
+
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(252, 158, 209, 0.657);
+}
+
+.primButton {
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20;
+  width: 50%;
+  --background: #eb2963;
+  --border-radius: 10px;
+  --box-shadow: 2px 2px 2px rgba(252, 133, 206, 0.698);
+  padding-right: 30px;
+  padding-left: 30px;
+}

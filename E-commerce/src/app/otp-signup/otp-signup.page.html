@@ -1,0 +1,52 @@
+<script src="otp-signup.page.ts"></script>
+
+<ion-content class="ion-content">
+  <ion-grid class="ion-padding">
+    <ion-row style="padding-left: 750px; padding-right: 0px;">
+      <ion-col size="11" >
+        <ion-card class="card">
+          <ion-grid style="width: 100%;">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="3" style="padding-top: 50px; padding-bottom: 40px;" class="ion-justify-content-center" >
+                <img src="../../assets/images/otp-signup.png" style="height: 100px; width: 100px; border-radius: 55px;">
+              </ion-col>
+            </ion-row>
+            <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+            <ion-row>
+              <ion-col size='12' >
+                  <div class="inputs">
+                    <ion-label style="padding-left: 45px;">Verify with OTP sent to {{userPhone}}</ion-label>
+                      
+                        <div class="inputs2" style="padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
+                            <ion-input type="password" id="otp" formControlName ="otp"></ion-input>
+                            </div>
+                          </div>
+                          <div *ngIf='this.check' style="color: rgb(255, 116, 116); padding-left: 55px;">Invalid OTP</div>
+                          <div *ngIf='!this.check' style="color: rgb(255, 116, 116); padding-left: 55px;"></div>
+                
+              </ion-col>
+            </ion-row>
+            
+            <ion-row style="padding-bottom: 70px; padding-top: 60px;">
+              <ion-col style="padding-top: 0px;">
+                <ion-row class="ion-justify-content-center" style="padding-top: 10px">
+                  <ion-text class="content" style="padding-left: 2px; padding-top: 0px; cursor: pointer" (click)="reset()">Resend OTP</ion-text>
+                </ion-row>
+                <ion-row class="ion-justify-content-center">
+                  <ion-col  size="6" style="padding-top: 0px;">
+                    <ion-button class="login-button" type='submit'  [routerLink]="checkotp() ? ['/createprofile'] : []">Continue</ion-button>
+                  </ion-col>
+                </ion-row>
+                
+              </ion-col>
+            </ion-row>
+          </form>
+
+            
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

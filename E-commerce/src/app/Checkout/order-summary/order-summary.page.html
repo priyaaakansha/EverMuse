@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar style="--background: #eb2963;color: #ffffff;">
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ORDER SUMMARY</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+<ion-grid style="padding: 20px">
+  <ion-row>
+    <h3 style="color: #eb2963; padding-left: 12px;">Order ID #{{order.id}}</h3>
+  </ion-row>
+
+  <ion-row style="padding: 10px 0px 0px 12px;">
+    <b>Delivery Address</b>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+    <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+      <ion-grid>
+        <ion-row style="padding: 0px">
+          <ion-col style="padding: 0px">
+            {{address.fName}} {{address.lName}} 
+          </ion-col>
+          <ion-col style="padding: 0px">
+            <ion-badge style="background-color: #e4e2e2b7; color: #616060; float: right;">{{address.type}}</ion-badge>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          {{address.phone}}
+        </ion-row>
+        <ion-row>
+          {{address.line1}}, {{address.line2}}, 
+        </ion-row>
+        <ion-row>
+          {{address.line3}}, {{address.city}}, {{address.state}}
+        </ion-row>
+        <ion-row>
+          India - {{address.pincode}}
+        </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-row style="padding: 20px 0px 0px 12px;">
+    <b>Item(s) in this Order</b>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+        <ion-grid>
+          <ion-card class="ion-padding" *ngFor="let item of items" style="background-color: #e4e2e2b7;" (click)="viewProduct(item)">
+            <ion-row>
+                <ion-col size="3">
+                  <img src="{{item.image}}" style="height: 100px; width: 100px;">
+                </ion-col>
+        
+                <ion-col style="padding-top: 22px;">
+                    <ion-row>
+                      <ion-text style="font-weight: 600;">{{item.company}} </ion-text>
+                    </ion-row>
+                    <ion-row>
+                      <ion-text>{{item.title}}</ion-text>
+                    </ion-row>
+                    <ion-row>
+                    <ion-text>{{item.price | currency: 'INR'}}</ion-text>
+                  </ion-row>
+                </ion-col> 
+      
+                <ion-col size="0.4" style="padding: 40px 5px 0px 0px; float: left;">
+                  <ion-icon style="font-size: 20px;" name="chevron-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+          </ion-card>
+        </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 10px 5px 0px 12px;">
+    <ion-col><b>Total Item(s) Price: </b></ion-col>
+    <ion-col><b style="float: right;">{{order.price | currency: 'INR'}}</b></ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 10px 5px 0px 12px;">
+    <ion-col><b>Mode of Payment: </b></ion-col>
+    <ion-col><b style="float: right;">{{order.modeOfPayment}} </b></ion-col>  
+  </ion-row>
+
+  </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

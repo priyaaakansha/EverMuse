@@ -1,0 +1,49 @@
+<ion-content class="ion-content">
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="5">
+        <ion-card class="card">
+          <ion-grid>
+            <ion-row class="ion-justify-content-center" style="padding-top: 30px;">
+                <img src="../../assets/images/OTP.png" style="height: 200px; width: 205px;">
+            </ion-row>
+
+            <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+
+            <ion-row>
+              <ion-col class="ion-padding">
+                  <div class="inputs">
+                    <ion-label style="padding-left:8px;">Verify with OTP sent to {{detail}}</ion-label>
+                        <div class="inputs2" style="padding-left: 20px; padding-right: 20px;">
+                            <ion-input type="password"  id="otp" formControlName ="otp">
+                            </ion-input>
+                            </div>   
+                  </div>             
+              </ion-col>
+            </ion-row>
+
+            <div *ngIf='this.check' style="color: rgb(255, 116, 116); padding-left: 55px;">Invalid OTP</div>
+            <div *ngIf='!this.check' style="color: rgb(255, 116, 116); padding-left: 55px;"></div>
+  </form>
+            <ion-row class="ion-justify-content-center" style="padding-top: 20px;">
+              <ion-text style="padding-left:15px;" class="content" (click)="reset()">Resend OTP</ion-text>
+            </ion-row>
+            
+
+            <ion-row>
+              <ion-col style="padding-bottom: 70px;">    
+                <ion-row class="ion-justify-content-center">
+                  <ion-col  size="6">
+                    <ion-button type="submit" (click)='onSubmit()' class="login-button">Login</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+
+            
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

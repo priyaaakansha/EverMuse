@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-grid style="padding: 30px 20px 30px 20px ">
+
+          <ion-row class="ion-justify-content-evenly">
+            <ion-col size="4">
+              <ion-grid>
+                <ion-row><ion-text class="heading">Boys</ion-text></ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Kids','Tshirts')">Tshirts</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Kids','Shirts')">Shirts</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Kids','Sweaters')">Sweaters</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Boys','Sweatshirts')">Sweatshirts</ion-row>
+                <ion-row class="subcats" (click)="exploreSubcat('Boys','Shoes')">Shoes</ion-row>
+
+                </ion-grid>
+              </ion-col>
+
+              <ion-col size="4">
+                <ion-grid>
+                  <ion-row><ion-text class="heading">Girls</ion-text></ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Girls','Tshirts')">Tshirts</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Dresses')">Dresses</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Skirts')">Skirts</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Trousers')">Trousers</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Sweatshirts')">Sweatshirts</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Jackets')">Jackets</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Shoes')">Shoes</ion-row>
+                </ion-grid>
+              </ion-col>
+
+              <ion-col size="4">
+                <ion-grid>
+                  <ion-row><ion-text class="heading">Kids Accessories</ion-text></ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Backpacks')">Backpacks</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Crayons')">Crayons</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Caps')">Caps</ion-row>
+                  <ion-row class="subcats" (click)="exploreSubcat('Kids','Toys')">Toys</ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>  
+           
+   </ion-grid>
+
+</ion-content> 
+

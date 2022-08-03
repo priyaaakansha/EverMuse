@@ -1,0 +1,116 @@
+<app-header></app-header>
+<ion-content>
+<ion-toolbar>
+  <ion-title>Update Profile</ion-title>
+</ion-toolbar>
+  
+  <ion-grid style="background-color: rgb(255, 242, 247);">
+    <!-- <ion-row class="ion-justify-content-center">
+      <img src="../../assets/images/Categories/Women.jpg" class="category">
+    </ion-row> -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding" size="4">
+          <div class="inputs">
+            <ion-label>
+              First Name
+            </ion-label>
+            <ion-row class="inputs2">
+              <ion-col size="11">
+                <ion-input type="text" id='fName' [(ngModel)]='this.user.fName' readonly="true">
+                </ion-input>
+              </ion-col>
+              <ion-col style="padding-top: 20px;">
+                <ion-icon name="pencil-outline" (click)='edit1()'></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+      </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding" size="4">
+        <div class="inputs">
+        <ion-label>
+          Last Name
+        </ion-label>
+        <ion-row class="inputs2">
+          <ion-col size="11">
+            <ion-input type="text" id='lName' [(ngModel)]='this.user.lName' readonly="true">
+            </ion-input>
+          </ion-col>
+          <ion-col style="padding-top: 20px;">
+            <ion-icon name="pencil-outline" (click)='edit2()'></ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding" size="4">
+        <!-- <div class="inputs" > -->
+        <ion-label style="padding-right: 100px; float: left;">
+          Gender:
+        </ion-label>
+          <ion-radio-group style="float: right;" [(ngModel)]='this.user.gender'>
+              <ion-label >
+                Male
+              </ion-label>
+              <ion-radio value="Male" style="--color: #eb2963; --color-checked: #eb2963"></ion-radio>
+
+              <ion-label style="padding-left: 100px;">
+                Female
+              </ion-label>
+              <ion-radio value="Female" style="-color: #eb2963; --color-checked: #eb2963"></ion-radio>
+          </ion-radio-group>
+    </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+        <ion-col class="ion-padding" size="4">
+            <div class="inputs">
+              <ion-label>
+                Email
+              </ion-label>
+              <ion-row class="inputs2">
+                <ion-col size="11">
+                  <ion-input type="text" [(ngModel)]='this.user.email' readonly="true">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+            </div>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">    
+      <ion-col class="ion-padding"  size="4">
+          <div class="inputs">
+            <ion-label>
+              Contact Number
+            </ion-label>
+            <ion-row class="inputs2">
+              <ion-col size="11">
+                <ion-input type="text" [(ngModel)]='this.user.phone' readonly="true">
+                </ion-input>
+              </ion-col>
+            </ion-row>
+          </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4">
+      <ion-button class="secButton" shape="round" fill="outline" type="submit" (click)="updatePwd()">Change Password</ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center" style="padding-top: 20px;">
+      <ion-col size="2">
+        <ion-card-content>
+          <ion-button expand="block" class="primButton" type='submit' (click)='onSubmit(); success()'>SAVE</ion-button>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

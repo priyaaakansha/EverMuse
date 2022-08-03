@@ -1,0 +1,61 @@
+.login-button {
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20;
+    margin: auto;
+    width: 100%;
+    --background: #eb2963;
+    --border-radius: 10px;
+    --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .input {
+    background: #fff;
+    color: #060c22;
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 9px 100px 9px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    float: left;
+  }
+  
+  .secButton {
+    color: #eb2963;
+    --border-color: #eb2963;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20;
+    margin: auto;
+    width: 100%;
+    --border-width: 0.2px;
+    --background: #fff;
+    --border-radius: 10px;
+    --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .heading {
+    color: rgb(248, 82, 82);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    float: left;
+    font-size: 18px;
+  }
+
+  .status {
+    padding-left: 10px;
+    color: rgb(33, 136, 79);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+  }
+  
+  .text {
+    color: rgba(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    float: left;
+    font-size: 12px;
+    // text-shadow: 2px 2px 2px rgba(74, 42, 52, 0.5);
+  }

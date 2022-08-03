@@ -1,0 +1,182 @@
+<script src="createprofile.page.ts"></script>
+<ion-content>
+  <ion-grid class="ion-padding">
+
+    <ion-row style="padding-left: 700px;">
+
+          <ion-col size="11">
+            <ion-card class="card">
+              <ion-grid>
+    
+                <ion-row class="ion-justify-content-center" style="padding-top: 30px; padding-bottom: 15px;"> 
+                      <ion-text class="options2">
+                        CREATE ACCOUNT
+                      </ion-text>    
+                </ion-row>
+                
+                <form [formGroup]="accountForm">
+                <div>
+                <ion-row>
+                  <ion-col class="ion-padding">
+                
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px; ">Mobile Number</ion-label>
+                       
+                        <div class="inputs2" style="padding: 10px">
+                          {{userPhone}}
+                        </div>
+                              </div>
+                    </ion-card-content>                
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col class="ion-padding">
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px;">Set Password</ion-label>
+                    
+                            <div class="inputs2" >
+                              <ion-input 
+                              
+                              type="password" 
+                              id="password" 
+                              formControlName="password" 
+                              placeholder=" Min 8 characters & upto 12 characters"
+                              >
+                              </ion-input>
+                                </div>
+                      </div>
+                    </ion-card-content> 
+
+                        <ion-text *ngIf="!accountForm.get('password').valid && accountForm.get('password').touched"
+                        class="help-block"  style="padding-left: 25px; color: rgb(255, 116, 116);">
+                        Please enter a valid password</ion-text>
+                          
+                                
+                  </ion-col>
+                </ion-row>
+
+                <ion-row class="ion-justify-content-center">
+                  <ion-col size="5.3">
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px;">First Name</ion-label>
+                          
+                            <div class="inputs2">
+                              <ion-input  style="text-transform: capitalize;"  words type="text"
+                              id="fName"
+                              formControlName="fName"
+                              >
+                              </ion-input>
+                                </div>
+                            
+                      </div>
+                     
+                      <ion-text *ngIf="!accountForm.get('fName').valid && accountForm.get('fName').touched" class="help-block">
+                        Required Field!</ion-text>
+
+                    </ion-card-content> 
+                  </ion-col>
+                  
+                  <ion-col size="5.3">
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px;">Last Name</ion-label>
+                          
+                            <div class="inputs2">
+                              
+                                <ion-input  style="text-transform: capitalize;" type="text"
+                                id="lName"
+                                formControlName="lName"
+                                >
+                                </ion-input>
+                              </div>
+                                                              
+                        </div>
+                     
+                        <ion-text *ngIf="!accountForm.get('lName').valid && accountForm.get('lName').touched" class="help-block">
+                          Required Field!</ion-text>
+                              
+                    </ion-card-content> 
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col class="ion-padding">
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px;">Gender</ion-label>
+                              <ion-radio-group formControlName ="gender" lines="half">
+                                
+                                  <ion-label  style="padding-left: 80px; padding-right: 10px;">Male</ion-label>
+                                  <ion-radio    style="--color-checked: #ffffff; padding-right: 4px; padding-top: 4px;" slot="start" Gender="male" checked></ion-radio>
+                              
+                                  <ion-label style="padding-left: 80px; padding-right: 10px;">Female</ion-label>
+                                  <ion-radio style="--color-checked: #ffffff;  padding-right: 4px; padding-top: 4px;" slot="start" Gender="female" ></ion-radio>
+                                
+                              </ion-radio-group>
+                      </div>
+                      
+                    </ion-card-content> 
+                                     
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col class="ion-padding" style="padding-top: 0px;">
+                    <ion-card-content>
+                      <div class="inputs">
+                        <ion-label style="padding-left:10px">Email Address</ion-label>
+                          
+                            <div class="inputs2">
+                                <ion-input 
+                                type="text" 
+                                class="placeholder" 
+                                id="email" 
+                                formControlName="email" 
+                                placeholder=" xyz@mail.com"
+                                >
+                                </ion-input>
+                                </div>
+                              
+                      </div>
+                     
+                      <ion-text *ngIf="!accountForm.get('email').valid && accountForm.get('email').touched"
+                            class="help-block" style="padding-left: 15px; color: rgb(255, 116, 116);">
+                            Please enter a valid email</ion-text>
+
+                    </ion-card-content>
+                  </ion-col>
+                </ion-row>
+                <div class="warning" id='check'></div>
+                
+                <ion-row>
+                  <ion-col style="padding-bottom: 20px; padding-top: 10px;">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-card-content class="check">
+                          <ion-checkbox id='checkbox' style="--size: 15px; --background-checked: #eb2963; display: inline-block;"></ion-checkbox>
+                          <ion-text> Keep me in EverMuse's mailing list</ion-text>
+                        </ion-card-content>
+                    </ion-row>
+        
+                    <ion-row class="ion-justify-content-center">
+                      <ion-col size="8.5">
+                      <ion-button [disabled]="!accountForm.valid" class="login-button" type="submit" (click)='onSubmit()'>Create</ion-button>
+                        </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+                </div>
+                </form>
+              </ion-grid>
+            </ion-card>
+          </ion-col>
+
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
+
+

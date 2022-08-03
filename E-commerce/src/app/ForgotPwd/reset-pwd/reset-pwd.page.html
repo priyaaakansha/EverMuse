@@ -1,0 +1,56 @@
+<ion-content class="ion-content">
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="4.5">
+        <ion-card class="card">
+          <ion-grid>
+            <ion-row class="ion-justify-content-center" style="padding-top: 30px;; color: #eb2963; font-weight: 600; font-size: 20px;">
+              Reset Password
+            </ion-row>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="6" style="padding-top: 30px;">
+                <img src="../../../assets/images/FogotPwd/reset.png">
+              </ion-col>
+            </ion-row>
+
+            <form [formGroup]="resetPwdForm" (ngSubmit)="onSubmit()">
+            <ion-row>
+              <ion-col class="ion-padding">
+                <ion-card-content>
+                  <div class="inputs">
+                    <ion-row>
+                      <ion-label style="padding-left: 10px;">Enter the email linked with your account to receive password change instructions</ion-label>                     
+                    </ion-row>  
+                          <div class="inputs2">
+                            <ion-input 
+                                type="text" 
+                                id="email" 
+                                formControlName="email" 
+                                placeholder=" xyz@mail.com">
+                              </ion-input>
+                          </div>        
+                    </div>
+                
+                    <ion-text *ngIf="!resetPwdForm.get('email').valid && resetPwdForm.get('email').touched"
+                          class="help-block" style="padding-left: 10px; color: red;">
+                          Please enter a valid email</ion-text>
+                          <div id='check'></div>
+                  
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-justify-content-center" style="padding-bottom: 40px; padding-top: 50px;">
+              <ion-col  size="6">
+                <ion-button type="submit" class="login-button" [routerLink]="userexists() ? ['/verify-email'] : []">Continue</ion-button>
+              </ion-col>
+            </ion-row>
+
+            </form>
+            
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

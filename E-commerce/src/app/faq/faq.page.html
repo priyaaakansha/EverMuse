@@ -1,0 +1,135 @@
+<ion-content>
+  <app-header></app-header>
+  <ion-grid style="padding-bottom: 15px;">
+    <ion-row style="padding-top: 20px;">
+      <ion-col size="8.5" style="padding-left: 80px">
+        <!-- <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+          hello
+        </ion-buttons> -->
+        <ion-text class="header" >Frequently Asked Questions</ion-text>
+      </ion-col>
+      <ion-col size="1.4" style="padding-right: 0px;">
+        <ion-text class="header" style="color:#808080;">Still need help?</ion-text>
+      </ion-col>
+      <ion-col size="2" style="padding-right: 80px; padding-left:0px">
+        <ion-text class="header" style="color:#EB2963; cursor: pointer;" routerLink="../contact">Contact Us</ion-text>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row>
+      <ion-col style="padding-left: 80px;">
+        <ion-text class="header" style="color:#EB2963">Top Queries</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText()">
+          <ion-text class="ion-text-left">How will I detect fraudulent emails/calls seeking sensitive personal and confidential information?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text class="text" id="tutorial" hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum
+            perspiciatis tempora ea in porro eligendi ullam fugit possimus dolore eius necessitatibus molestiae odio, sapiente
+            incidunt temporibus recusandae neque? Maiores placeat dolore in! Nulla non harum id aperiam quisquam dolorem
+            consequuntur ratione incidunt eum consequatur? Iure velit repellendus ad non.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText1()">
+          <ion-text class="ion-text-left">How do I cancel the order, I have placed?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text class="text" id="tutorial1" hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum
+            perspiciatis tempora ea in porro eligendi ullam fugit possimus dolore eius necessitatibus molestiae odio,
+            sapiente
+            incidunt temporibus recusandae neque? Maiores placeat dolore in! Nulla non harum id aperiam quisquam dolorem
+            consequuntur ratione incidunt eum consequatur? Iure velit repellendus ad non.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <br>
+
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText2()">
+          <ion-text class="ion-text-left">How can i change my mobile number that I use to login on XYZ?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text  class="text" id="tutorial2" hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum
+            perspiciatis tempora ea in porro eligendi ullam fugit possimus dolore eius necessitatibus molestiae odio,
+            sapiente
+            incidunt temporibus recusandae neque? Maiores placeat dolore in! Nulla non harum id aperiam quisquam dolorem
+            consequuntur ratione incidunt eum consequatur? Iure velit repellendus ad non.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <br>
+
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText3()">
+          <ion-text class="ion-text-left">How does the COD (Cash on Delivery) payment option work?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text class="text" id="tutorial3" hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum
+            perspiciatis tempora ea in porro eligendi ullam fugit possimus dolore eius necessitatibus molestiae odio,
+            sapiente
+            incidunt temporibus recusandae neque? Maiores placeat dolore in! Nulla non harum id aperiam quisquam dolorem
+            consequuntur ratione incidunt eum consequatur? Iure velit repellendus ad non.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <br>
+
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText4()">
+          <ion-text class="ion-text-left">If I return/cancel the purchased product will the GST/VAT amount charged be refunded?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text class="text" id="tutorial4" hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum
+            perspiciatis tempora ea in porro eligendi ullam fugit possimus dolore eius necessitatibus molestiae odio,
+            sapiente
+            incidunt temporibus recusandae neque? Maiores placeat dolore in! Nulla non harum id aperiam quisquam dolorem
+            consequuntur ratione incidunt eum consequatur? Iure velit repellendus ad non.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <br>
+
+    <ion-row>
+      <ion-col>
+        <ion-text expand="full" (click)="showText5()">
+          <ion-text class="ion-text-left">How will I detect fraudulent emails/calls seeking sensitive personal and
+            confidential information?
+          </ion-text>
+          <ion-icon name="chevron-down"></ion-icon>
+        </ion-text>
+        <ion-row>
+          <ion-text class="text" id="tutorial5" hidden="true">If you receive an e-mail, a call from a person/association claiming to be from Myntra seeking sensitive confidential
+          information like debit/credit card PIN, net-banking or mobile banking password, we request you to never provide such
+          confidential and personal data. We at Myntra or our affiliate logistics partner never ask for such confidential and
+          personal data. If you have already revealed such information, report it immediately to an appropriate law enforcement
+          agency.</ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <app-footer></app-footer>
+
+</ion-content>

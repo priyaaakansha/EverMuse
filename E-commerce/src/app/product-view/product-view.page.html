@@ -1,0 +1,110 @@
+<app-header></app-header>
+
+<!-- <ion-header> -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{product.title}}</ion-title>
+  </ion-toolbar>
+<!-- </ion-header> -->
+
+<ion-grid>
+    <ion-row class="ion-justify-content-evenly">
+
+    <ion-col size="4.9">
+      <ion-card style="padding: 32px 30px 32px 30px">
+        <ion-row class="ion-justify-content-center">
+          <img src="{{product.image}}" id="pImage">
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  
+    <ion-col size="6.8">
+      <ion-card style="padding: 15px 35px 30px 38px; height: 512px;">
+
+        <ion-row>
+          <h4 id="pTitle">{{product.company}}</h4>
+        </ion-row>
+        <ion-row><ion-text style="padding-right: 10px;">{{product.title}}</ion-text>
+        <ion-badge color="primary" mode="md">{{product.category}}</ion-badge>
+
+        </ion-row>
+        <ion-row><ion-text id="pTitle" style="padding-top: 10px;">{{ product.price | currency:'INR'}}</ion-text></ion-row>
+        <ion-row><ion-text style="color: rgb(8, 170, 75);"><b>Price is inclusive of all taxes</b></ion-text></ion-row>
+
+        <ion-row style="padding-top: 20px; padding-bottom: 0px;">
+          <b style="color: #488aff;">Description: </b>
+        </ion-row>
+        <p style="padding-top: 0px;">
+          {{product.description}}
+        </p>
+
+        <ion-row>
+          <b style="color: #488aff; padding-right: 5px;">Color:</b>{{product.color}}
+        </ion-row>
+
+        <ion-row style="padding-bottom: 0px; ">
+          <ion-col size="0.8" style="padding-top: 15px; padding-left: 0px;">
+          <b style="color: #488aff; padding-right: 5px;">Size: </b>
+          </ion-col>
+          <ion-col *ngIf='check1(product)' size="4" style="padding-top: 0px;">
+          <ion-item style="padding-top: 0px;">
+            <ion-label>Select Size</ion-label>
+          <ion-select [(ngModel)]="size" (ionChange)="onChange(size)" style="padding-top: 0px;">
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+          </ion-item>
+          </ion-col>
+          <ion-col *ngIf='check2(product)' size="4">
+          <ion-item style="padding-top: 0px;">
+            <ion-label>Select Size</ion-label>
+          <ion-select [(ngModel)]="size" (ionChange)="onChange(size)" style="padding-top: 0px;">
+            <ion-select-option value="36">36</ion-select-option>
+            <ion-select-option value="38">38</ion-select-option>
+            <ion-select-option value="40">40</ion-select-option>
+            <ion-select-option value="42">42</ion-select-option>
+          </ion-select>
+          </ion-item>
+          </ion-col>
+          <ion-col *ngIf='!check1(product) && !check2(product)' style="padding-top: 15px;">
+          <p >One Size</p>
+          </ion-col>
+      </ion-row>
+      <div id='check' style="color: red;"></div>
+
+        <ion-row style="padding-top: 5px;">
+          <ion-col size="1.2" style="padding: 0px">
+            <img src="../../assets/images/original-removebg-preview.png" style="height: 55px; width: 62px;">
+          </ion-col>
+        <ion-col size="10.8" style="padding: 0px">
+          <ion-row>
+            <b>100% Original Product</b>
+          </ion-row>
+          <ion-row>
+              You can return the product within 15 days if the delivered product is damaged, expired, different from ordered.
+          </ion-row>
+        </ion-col>
+        </ion-row>
+       
+        <br>
+
+        <ion-row class="ion-justify-content-evenly">
+          <ion-col size="5">
+            <ion-button (click)="addToCart(product)" class="prim-btn" type="submit"><ion-icon name="bag" class="icon" style="padding-bottom: 4px"></ion-icon>Add to Cart</ion-button>
+          </ion-col>
+
+          <ion-col size="5">
+            <ion-button fill="outline" (click)="addToWishlist(product)" class="sec-btn" type="submit"><ion-icon name="heart" class="icon"></ion-icon>  Add to Wishlist</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+    </ion-row>
+      
+  </ion-grid>
+
+

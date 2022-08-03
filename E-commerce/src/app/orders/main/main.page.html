@@ -1,0 +1,70 @@
+<ion-content>
+
+  <app-header></app-header>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title style="--padding: 0px">Your Orders</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <div *ngFor="let order of orders" style="padding-bottom: 15px;">
+      <ion-grid style="background-color: #e4e2e2b7; padding: 10px;" >
+      <ion-text *ngIf="order.delivered" style="padding-left: 10px;">#{{order.id}} <div class="status">Delivered</div></ion-text>
+    <ion-text *ngIf="!order.delivered && !order.cancel" style="padding-left: 10px;">#{{order.id}} <div class="status" style="color: orange;">In Transit</div></ion-text>
+    <ion-text *ngIf="order.cancel" style="padding-left: 10px;">#{{order.id}} <div class="status" style="color: rgb(241, 76, 10);">Cancelled! Refund will be initiated within 3-7 working days</div></ion-text>
+
+    <ion-card class="ion-padding" *ngFor="let product of order.products">
+    <ion-row>
+      
+        <ion-col size="2">
+          <img src="{{product.image}}" style="height: 180px; width: 180px; border-radius: 10px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);">
+        </ion-col>
+
+        <ion-col style="padding-top: 55px;">
+          <ion-row style="padding-left: 10px; font-size: 20px;">
+            <ion-col size="3">
+            <ion-text style="font-weight: 600;">{{product.company}} </ion-text>
+            </ion-col>
+            <ion-col size="7.5">
+            <ion-text>   {{product.title}}</ion-text>
+            </ion-col>
+            <ion-col size="1.5">
+            <ion-text style="font-weight: 600;">  {{product.price | currency: 'INR'}}</ion-text>
+            </ion-col>
+          </ion-row>
+
+          <ion-row *ngIf="!order.delivered && !order.cancel" class="ion-justify-content-evenly" style="padding-top: 10px;">
+            <ion-col size="6" style="padding-right: 85px; padding-left: 10px">
+              <ion-button class="login-button" type="submit" (click)="track(product, order.id)" routerLink="/home">Track Order</ion-button>
+            </ion-col>
+
+            <ion-col size="6" style="padding-right: 35px;">
+              <ion-button class="secButton" shape="round" fill="outline" type="submit" (click)="cancelAlert(order)">Cancel</ion-button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row *ngIf="order.delivered" class="ion-justify-content-evenly" style="padding-top: 10px;">
+            <ion-col size="6" style="padding-right: 85px; padding-left: 10px">
+              <ion-button class="login-button" type="submit" (click)="return(product, order.id)">Return</ion-button>
+            </ion-col>
+
+            <ion-col size="6" style="padding-right: 35px;">
+              <ion-button class="login-button" type="submit" (click)="exchange(product, order.id)">Exchange</ion-button>
+            </ion-col>
+          </ion-row>
+
+        </ion-col> 
+      </ion-row>
+  </ion-card>
+  </ion-grid>
+  </div>
+  </ion-grid>
+
+  <app-footer></app-footer> 
+
+</ion-content>

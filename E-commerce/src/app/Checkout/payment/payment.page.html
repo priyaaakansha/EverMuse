@@ -1,0 +1,194 @@
+<script src="payment.page.ts"></script>
+<ion-content>
+
+<app-header></app-header>
+
+<ion-grid style="padding: 0px 0px 20px 0px;">
+  <ion-row style="height: 30px; background-color: rgb(253, 192, 210, 0.5);" class="ion-justify-content-evenly">
+    <ion-col size="0.55">
+      <ion-text>Cart <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+    </ion-col>
+
+    <ion-col size="1.37">
+      <ion-text>Shipping Address <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+    </ion-col>
+
+    <ion-col size="0.85">
+      <ion-text>Payment <ion-icon name="radio-button-on" class="icon"></ion-icon></ion-text>
+    </ion-col>
+
+    <ion-col size="1.12">
+      <ion-text>Order Placed <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+    </ion-col></ion-row>
+</ion-grid>
+
+<ion-row style="padding-left: 55px; padding-top: 10px; padding-bottom: 0px;">
+  <ion-text style="font-size: large;"><b>Select a Payment Method</b></ion-text>
+</ion-row>
+
+<ion-grid>
+  <ion-row>
+<ion-col style="padding-top: 0px">
+ 
+<ion-radio-group lines="half">
+
+  <!-- <ion-row>
+    <ion-col size="0.4" style="padding-left: 20px; padding-top: 20px;">
+      <ion-radio id='btn1' style="--color-checked: #eb2963bb; --color: #eb2963bb; padding-right: 4px; padding-top: 4px;"
+      (click)="showButton(); method(1)" value="1"></ion-radio>
+    </ion-col>
+
+    <ion-col size="11">
+      <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="0.8">
+              <img src="../../../assets/images/card.png" style="height: 24px; width: 42px; border-radius: 3px;">
+            </ion-col>
+            <ion-col style="padding-top: 2px; padding-left: 0px;">
+              <ion-text style="font-size: 20px;">Card</ion-text>
+            </ion-col>
+          </ion-row>
+            <ion-row style="padding-left: 5px;">
+              <ion-text style="font-size: 16px;">Pay Via Debit/Credit Card</ion-text>
+            </ion-row>
+            <ion-row class="ion-justify-content-evenly">
+              <ion-col *ngFor="let card of cards">
+                <img src="{{card.image}}" style="width: 80px; height: 40px;">
+              </ion-col>
+        </ion-row>
+
+        <ion-row id="card" hidden="true" style="padding-top: 10px">
+          <ion-button class="primButton" style="padding-left: 250px; padding-right: 250px;" type="submit" (click)='makePayment(subtotal)'>Make Payment</ion-button>
+        </ion-row>
+        </ion-grid>
+      </ion-card>
+      
+    </ion-col>  
+  </ion-row> -->
+
+  <ion-row>
+    <ion-col size="0.4" style="padding-left: 20px; padding-top: 20px;">
+      <ion-radio style="--color-checked: #eb2963bb; --color: #eb2963bb; padding-right: 4px; padding-top: 4px;" 
+      (click)="method(2)" Method="2"></ion-radio>
+      <!-- <ion-radio style="--color-checked: #eb2963bb; --color: #eb2963bb; padding-right: 4px; padding-top: 4px;" 
+      (click)="hideButton(); method(2)" Method="2"></ion-radio> -->
+    </ion-col>
+
+    <ion-col size="11">
+      <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+        <ion-grid>
+        <ion-row>
+          <ion-col size="10">
+            <ion-row>
+              <ion-col size="1">
+                <img src="../../../assets/images/cash2.png" style="height: 24px; width: 42px; border-radius: 3px;">
+              </ion-col>
+              <ion-col style="padding-top: 2px; padding-left: 0px;">
+                <ion-text style="font-size: 20px;">Cash on Delivery</ion-text>
+              </ion-col>
+            </ion-row>
+              <ion-row style="padding-left: 5px;">
+                <ion-text style="font-size: 16px;">Make payment via cash at the time of delivery</ion-text>
+              </ion-row>
+          </ion-col>
+          
+        <ion-col size="2">
+          <img src="../../../assets/images/cod.png" style="height: 110px; width: 120px;">
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  </ion-radio-group>
+  </ion-col>
+
+  <ion-col size="4">
+    <ion-card class="ion-padding">
+     <ion-grid>
+      <ion-row style="padding-left: 2px; padding-bottom: 10px;">
+        <ion-text style="font-size: 17px; font-weight: 600; color: #000000;">Total Amount</ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-text style="float: left;">Item(s) Total:  </ion-text>
+          <ion-text style="float: right;">{{sum | currency: 'INR'}}</ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-text style="float: left;">Delivery Charges: </ion-text>
+          <ion-text style="float: right;" *ngIf='delivery'>{{150 | currency: 'INR'}}</ion-text>
+          <ion-text style="float: right;" *ngIf='!delivery'>Free</ion-text>
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-text style="float: left;">Payable Amount</ion-text>
+          <ion-text style="float: right;">{{subtotal | currency: 'INR'}}</ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-top: 0px;">
+        <ion-col style="padding-top: 0px;">
+          <ion-text style="float: left; font-size: 10px;">(Inclusive of all taxes)</ion-text>
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+    </ion-card>
+
+    <ion-row>
+      <ion-col class="ion-padding" style="padding-top: 30px;">
+        <ion-button class="primButton" type="submit" (click)="onSubmit()" [routerLink]="checked() ? ['/thankyou'] : []">Confirm Order</ion-button>
+        <div id='check' style="color: red; padding-left: 35px;"></div>
+        
+      </ion-col>
+    </ion-row>
+   </ion-col>
+  </ion-row>
+   </ion-grid>
+  </ion-content>
+
+  <ion-footer style="filter: drop-shadow(2px 2px 2px #b7fd97);">
+
+    <ion-row style="background-color: #B7E5A1; height: 100px;" class="ion-justify-content-center">
+      <ion-col size="2" style="padding-top: 15px; padding-left: 70px;">
+        <img src="../../assets/images/PQRbank.png" style="height: 70px; width: 135px;">
+      </ion-col>
+  
+      <ion-col size="4"style="padding-top: 25px; padding-left: 20px">
+        <ion-grid>
+          <ion-row>
+            <ion-text><b>Get 10% instant discount <ion-text style="color: red; font-weight: 400;">*</ion-text></b></ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text >On PQR Debit & Credit Cards</ion-text>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+  
+      <ion-col class="vl">
+        <ion-text> </ion-text>
+      </ion-col>
+         <ion-col size="2" style="padding-top: 15px; padding-left: 70px;">
+        <img src="../../assets/images/EFGbank.png" style="height: 70px; width: 135px;">
+      </ion-col>
+  
+      <ion-col size="2.5" style="padding-top: 25px; padding-left: 20px;">
+        <ion-grid>
+          <ion-row>
+            <ion-text><b>Get 5% instant discount <ion-text style="color: red; font-weight: 400;">*</ion-text></b></ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>On PQR Credit Cards</ion-text>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+</ion-footer>
+
+

@@ -1,0 +1,79 @@
+  <ion-grid style="padding: 30px 20px 30px 20px ">
+    <ion-row class="ion-justify-content-evenly">
+
+      <ion-col size="5.5"> 
+        <ion-grid> 
+          <ion-row style="padding-left: 10px;">
+            <ion-text class="heading">Apparels</ion-text>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-text class="heading">Western Wear</ion-text>
+                </ion-row>                
+                <ion-row (click)="exploreSubcat('Men','Tshirts')">
+                  <ion-text class="subcats">Tshirts</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Men','Shirts')">
+                  <ion-text class="subcats">Shirts</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Men','Trousers')">
+                  <ion-text class="subcats">Trousers</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Men','Jeans')">
+                  <ion-text class="subcats">Jeans</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Men','Blazers')">
+                  <ion-text class="subcats">Blazers</ion-text>
+                </ion-row>
+
+                </ion-grid>
+    
+              </ion-col>
+            </ion-row>  
+            
+            <ion-row>
+              <ion-col>
+                <ion-grid>
+                  <ion-row>
+                    <ion-text class="heading">Ethnic Wear</ion-text>
+                  </ion-row>
+                  
+                  <ion-row (click)="exploreSubcat('Men','Kurta')"><ion-text class="subcats">Kurta</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Men','Sherwani')"><ion-text class="subcats">Sherwani</ion-text></ion-row>
+  
+                  </ion-grid>
+      
+                </ion-col>
+              </ion-row>  
+
+        </ion-grid>
+      </ion-col>
+
+      <ion-col size="5.5">
+        <ion-grid> 
+
+                <ion-row>
+                  <ion-text class="heading">Footwear</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Men','Flip Flops')"><ion-text class="subcats">Flip Flops</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Men','Sandals')"><ion-text class="subcats">Sandals</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Men','Casual Shoes')"><ion-text class="subcats">Casual Shoes</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Men','Sports Shoes')"><ion-text class="subcats">Sports Shoes</ion-text></ion-row>
+
+                <br>
+
+                  <ion-row>
+                    <ion-text class="heading">Accessories</ion-text>
+                  </ion-row>
+
+                  <ion-row (click)="exploreSubcat('Men','Tie')"><ion-text class="subcats">Ties</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Men','Cap')"><ion-text class="subcats">Caps</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Men','Wallet')"><ion-text class="subcats">Wallets</ion-text></ion-row>
+
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

@@ -1,0 +1,76 @@
+<ion-content class="ion-content">
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="4.7">
+        <ion-card class="card">
+          <ion-grid>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="3" style="padding-top: 25px;">
+                <img src="../../assets/images/Picture2.png">
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 5px;">
+                <ion-card-content>
+                  <ion-title class="options1">
+                    LOGIN
+                  </ion-title>
+                  <ion-title class="options2" routerLink="/signup">
+                    SIGN UP
+                  </ion-title>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+
+            <form [formGroup]="loginEmailForm" (ngSubmit)="onSubmit()">
+            
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 0px;">
+                <ion-card-content>
+                  <div class="inputs">
+                    <ion-label style="padding-left: 15px;">Email Address</ion-label>  
+                        <div class="inputs2">
+                            <ion-input 
+                            type="text" 
+                            id="email" formControlName="email" 
+                            placeholder=" xyz@mail.com">
+                            </ion-input>
+                            </div>        
+                  </div>
+
+                  <ion-text *ngIf="!loginEmailForm.get('email').valid && loginEmailForm.get('email').touched"
+                        class="help-block" style="padding-left: 10px;">
+                        Please enter a valid email</ion-text>
+
+                <ion-card-content class="content">
+                  <ion-text>Continue with <b style="cursor: pointer;" routerLink="/otp-email">OTP</b> or <b style="cursor: pointer;" routerLink="/password">Password</b></ion-text>
+                </ion-card-content>
+              </ion-card-content>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-card-title class="ion-text-center" style="color: rgba(0,0,0,0.6)">
+                  <h2>
+                    <ion-text class="or">OR</ion-text>
+                  </h2>
+                </ion-card-title>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 48px; padding-bottom: 48px;">
+                <ion-button class="login-button" type="submit" routerLink="/login-mob">Login with Mobile Number</ion-button>
+              </ion-col>
+            </ion-row>
+          </form>
+
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,102 @@
+<script src="logincopy.page.ts"></script>
+<ion-content >
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="4.5">
+        <ion-card class="card">
+          <ion-grid style="width: 100%;">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="2.3" style="padding-top: 25px;">
+                <img src="../../assets/images/Picture2.png">
+              </ion-col>
+            </ion-row>
+
+            <ion-row >
+              <ion-col style="padding-top: 0px;">
+                  <ion-title class="options1">
+                    LOGIN
+                  </ion-title>
+                  <ion-title class="options2" routerLink="/signup">
+                    SIGN UP
+                  </ion-title>
+              </ion-col>
+            </ion-row>
+
+            <form [formGroup]="loginEmailForm" (ngSubmit)="onSubmit()">
+            
+            <ion-row>
+              <ion-col style="padding-bottom: 0px;">
+                <ion-card-content>
+                  <div class="inputs">
+                    <ion-label style="padding-left: 10px;">Email Address/Phone Number</ion-label>  
+                        <div class="inputs2">
+                            <ion-input 
+                            type="text" 
+                            id="email"  
+                            formControlName='email'
+                            style="font-size: 17px;"                     
+                            placeholder=" xyz@mail.com">
+                            </ion-input>
+                            </div>        
+                  </div>
+
+                  <ion-text class="warning" *ngIf="!this.valid && this.submitted && loginEmailForm.get('email').touched">
+                    Please enter a valid Email Id or Phone </ion-text>
+
+              </ion-card-content>
+              </ion-col>
+            </ion-row>
+            <ion-row style="padding-top: 0px; margin-top: 0px;">
+              <ion-col>
+                <ion-card-content style="padding-top: 0px ;">
+                  <div class="inputs">
+                    <ion-label style="padding-left: 10px;">Password</ion-label>  
+                        <div class="inputs2" >
+                            <ion-input
+                            type="password" 
+                            style="font-size: 17px;"
+                            id="pwd" formControlName="password" 
+                             >
+                            </ion-input>
+                            </div>        
+                  </div>
+                  <ion-text class="warning" *ngIf="!this.validpass && this.submitted && loginEmailForm.get('password').touched">
+                    Please enter a valid Password </ion-text>
+                  <ion-text id='validation2'></ion-text>
+                  <div id='checkPass'></div>
+              </ion-card-content>
+              <ion-row>
+                <ion-col class="ion-padding" style="padding-top: 40px; padding-bottom: 20px;">
+                  <ion-button class="primButton" type="submit" (click)='onSubmit()' [routerLink]="this.letsgo() ? ['/home-page'] : []">Login</ion-button>
+                </ion-col>
+              </ion-row>  
+            </ion-col>
+            </ion-row>
+
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-card-title class="ion-text-center" style="color: rgba(0,0,0,0.6)">
+                  <h2>
+                    <ion-text class="or" style="font-size: 17px;">OR</ion-text>
+                  </h2>
+                </ion-card-title>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col class="ion-padding" style="padding-top: 30px; padding-bottom: 50px;">
+                <ion-button class="secButton" shape="round" (click)='otp(); share()' fill="outline"  [routerLink]="this.exists ? ['/otp-email'] : []">Request OTP</ion-button>
+                <div id='otp' style="color: rgb(255, 116, 116); padding-left: 60px;"></div>
+              </ion-col>
+
+            </ion-row>
+          </form>
+
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

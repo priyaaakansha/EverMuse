@@ -1,0 +1,43 @@
+.ion-content {
+    --background: url(../../../assets/images/try/guillaume-galtier-3YrppYQPoCI-unsplash.jpg) 0 0/100% 100% no-repeat !important;
+    background-color: #ffffff;
+  }
+  
+  .ion-padding{
+    --ion-padding: 80px;
+  }
+  
+  .card{
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #eb2963;
+    opacity: 0.95;
+  }
+  
+  .login-button {
+    color: #eb2963;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20;
+    margin: auto;
+    width: 100%;
+    // width: 100px;
+    --background: #ffffff;
+    --border-radius: 10px;
+    --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .router:hover{
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 550;
+    cursor: pointer;
+  }
+
+  .icon {
+    padding-top: 3px;
+    color: #eb2963; 
+    float: right; 
+  }

@@ -1,0 +1,106 @@
+<ion-content>
+  <ion-grid style="padding: 30px 20px 30px 20px ">
+    <ion-row class="ion-justify-content-evenly">
+
+      <ion-col size="5.5"> 
+        <ion-grid> 
+          <ion-row style="padding-left: 10px; ">
+            <ion-text class="heading">Apparels</ion-text>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-text class="heading">Western Wear</ion-text>
+                </ion-row>
+                
+                <ion-row (click)="exploreSubcat('Women','Tshirts')">
+                  <ion-text class="subcats">Tshirts</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Women','Shirts')">
+                  <ion-text class="subcats">Shirts</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Women','Dresses')">
+                  <ion-text class="subcats">Dresses</ion-text>
+                </ion-row>
+                <ion-row (click)="exploreSubcat('Women','Blazers')">
+                  <ion-text class="subcats">Blazers</ion-text>
+                </ion-row>
+
+                </ion-grid>
+    
+              </ion-col>
+            </ion-row>  
+            
+            <ion-row>
+              <ion-col>
+                <ion-grid>
+                  <ion-row>
+                    <ion-text class="heading">Ethnic Wear</ion-text>
+                  </ion-row>        
+                  <ion-row (click)="exploreSubcat('Women','Kurta Sets')">
+                    <ion-text class="subcats">Kurta Sets</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Women','Sarees')">
+                    <ion-text class="subcats">Sarees</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Women','Lehenga Cholis')">
+                    <ion-text class="subcats">Lehenga Cholis</ion-text></ion-row>
+  
+                  </ion-grid>
+      
+                </ion-col>
+              </ion-row>  
+
+        </ion-grid>
+      </ion-col>
+
+      <ion-col size="5.5">
+        <ion-grid> 
+
+          <ion-row>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-text class="heading">Footwear</ion-text>
+                </ion-row>
+                
+                <ion-row (click)="exploreSubcat('Women','Flip Flops')">
+                  <ion-text class="subcats">Flip Flops</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Women','Sandals')">
+                  <ion-text class="subcats">Sandals</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Women','Heels')">
+                  <ion-text class="subcats">Heels</ion-text></ion-row>
+                <ion-row (click)="exploreSubcat('Women','Shoes')">
+                  <ion-text class="subcats">Shoes</ion-text></ion-row>
+
+                </ion-grid>
+    
+              </ion-col>
+            </ion-row>  
+            
+            <ion-row>
+              <ion-col>
+                <ion-grid>
+                  <ion-row>
+                    <ion-text class="heading">Accessories</ion-text>
+                  </ion-row>
+                  
+                  <ion-row (click)="exploreSubcat('Women','Jewellery')">
+                    <ion-text class="subcats">Jewellery</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Women','Scarves')">
+                    <ion-text class="subcats">Scarves</ion-text></ion-row>
+                  <ion-row (click)="exploreSubcat('Women','Wallets & Handbags')">
+                    <ion-text class="subcats">Wallets & Handbags</ion-text></ion-row>
+  
+                  </ion-grid>
+      
+                </ion-col>
+              </ion-row>  
+
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+   </ion-grid>
+
+</ion-content> 
+

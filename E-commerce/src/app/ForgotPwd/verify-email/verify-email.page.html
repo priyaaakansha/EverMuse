@@ -1,0 +1,54 @@
+<ion-content class="ion-content">
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="4.5">
+        <ion-card class="card">
+          <ion-grid>
+            <ion-row class="ion-justify-content-center" style="padding-top: 30px;; color: #eb2963; font-weight: 600; font-size: 20px;">
+              Verify Your Email
+            </ion-row>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="5.5" style="padding-top: 30px;">
+                <img src="../../../assets/images/FogotPwd/email.png">
+              </ion-col>
+            </ion-row>
+
+            <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+            <ion-row>
+              <ion-col class="ion-padding">
+                <ion-card-content>
+                  <div class="inputs">
+                    <ion-row>
+                      <ion-label password style="padding-left: 10px;">Please enter the 4 digit verification code sent to your email</ion-label>                     
+                    </ion-row>  
+                          <div class="inputs2">
+                            <ion-input 
+                              type="number" id="otp" formControlName ="otp">
+                            </ion-input>
+                          </div>        
+                    </div>
+                    <div id='check'></div>
+                
+                    <ion-text *ngIf="!checkotp() && otpForm.get('otp').touched"
+                          class="help-block" style="padding-left: 10px; color: red;">
+                          Please enter a valid otp
+                    </ion-text>
+                  
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-justify-content-center" style="padding-bottom: 40px; padding-top: 50px;">
+              <ion-col  size="6">
+                <ion-button type="submit" class="login-button">Continue</ion-button>
+              </ion-col>
+            </ion-row>
+
+            </form>
+            
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

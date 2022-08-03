@@ -1,0 +1,20 @@
+ion-content {
+    --background: url("../../assets/images/track.jpg") 0 0/100% 100% no-repeat !important;
+    // background-color: #fff;
+  }
+
+  .text{
+    font-size: 20px;
+}
+
+.done{
+    color: #127e4a;
+    padding-top: 7px;
+    padding-right: 5px;
+}
+
+.process{
+    color: #eb9029;
+    padding-top: 7px;
+    padding-right: 5px;
+}

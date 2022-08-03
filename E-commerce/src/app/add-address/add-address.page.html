@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar style="--background: #eb2963;color: #ffffff;">
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ADD ADDRESS</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background: #fff7f9;color: #ffffff;">
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <form [formGroup]="address">
+      <ion-row class="ion-justify-content-center" style="padding: 20px;">
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">First Name</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="fName" formControlName='fName' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">Last Name</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="lName" formControlName='lName' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding: 10px;">
+        <div class="inputs">
+          <ion-label style="padding-left: 10px;">Flat/House No., Building Name</ion-label>
+          <div class="inputs2">
+            <ion-input type="text" id="line1" formControlName='line1' style="font-size: 17px;">
+            </ion-input>
+          </div>
+        </div>
+      </ion-row>
+
+      <ion-row style="padding: 10px;">
+        <div class="inputs">
+          <ion-label style="padding-left: 10px;">Area/Street/Sector/Village</ion-label>
+          <div class="inputs2">
+            <ion-input type="text" id="line2" formControlName='line2' style="font-size: 17px;">
+            </ion-input>
+          </div>
+        </div>
+      </ion-row>
+
+      <ion-row style="padding: 10px;">
+        <div class="inputs">
+          <ion-label style="padding-left: 10px;">Landmark</ion-label>
+          <div class="inputs2">
+            <ion-input type="text" id="line3" formControlName='line3' style="font-size: 17px;">
+            </ion-input>
+          </div>
+        </div>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center" style="padding: 20px;">
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">City/Town</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="city" formControlName='city' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">State</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="state" formControlName='state' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center" style="padding: 20px;">
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">Pincode</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="pincode" formControlName='pincode' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="inputs">
+            <ion-label style="padding-left: 10px;">Phone Number</ion-label>
+            <div class="inputs2">
+              <ion-input type="text" id="phone" formControlName='phone' style="font-size: 17px;">
+              </ion-input>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-card-content>
+            <div class="inputs">
+              <ion-label style="padding-left:10px;">Address Type</ion-label>
+                <ion-row  style="padding-left: 8px;">
+                    <ion-radio-group (ionChange)="radio($event)" formControlName ="type" lines="half">
+                        <ion-radio  id='home' style="padding-right: 4px; padding-top: 4px;" slot="start" value="Home"></ion-radio>
+                        <ion-label style="padding-right: 50px;">Home (All Day Delivery)</ion-label>
+                        <br>
+                        <ion-radio id='work' style="padding-right: 4px; padding-top: 4px;" slot="start" value="Work" ></ion-radio>
+                        <ion-label style="padding-right: 10px;">Work (Delivery between 10 AM - 5 PM)</ion-label>
+                      </ion-radio-group>
+                </ion-row>
+            </div>
+            
+          </ion-card-content> 
+                           
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center" style="padding-bottom: 15px">
+        <ion-button class="primButton" [disabled]='!address.valid' (click)='onSubmit(); save()' type="submit">
+          Save</ion-button>
+      </ion-row>
+    </form>
+  </ion-row>
+</ion-grid>
+</ion-content>

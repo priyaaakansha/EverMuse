@@ -1,0 +1,275 @@
+.header{
+    background-color: black;
+    // height: 100px;
+    padding: 10px 30px 0px 30px;
+}
+
+h2 {
+    width: 30%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    line-height: 0.1em;
+    margin: auto;
+    font-family: "Stoke", sans-serif;
+    font-size: 30px;
+  }
+  
+  h2 .or {
+    background: #ffffff;
+    padding: 0 10px;
+    font-family: "Stoke", sans-serif;
+  }
+
+  .category{
+    height: 110px; 
+    width: 110px; 
+    border-radius: 75px;
+    filter: drop-shadow(2px 2px 2px #000000a9);
+  }
+
+  .col:hover{
+    .category{
+      height: 120px; 
+      width: 120px;
+    }
+    color: rgba(56, 128, 255);
+  }
+
+  .deals{
+    height: 200px; 
+    width: 200px; 
+    border-radius: 100px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.507));
+  }
+
+  .deal-text{
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .ion-text{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .vl{
+    border-left: 1px solid  black;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top:12px;
+  }
+
+  .card{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 10px;
+  }
+  .card:hover{
+      img{
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        transform: scale(1.1);
+    }
+  }
+
+  .input {
+    background: #fff;
+    color: #060c22;
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 9px 100px 9px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    float: left;
+  }
+  
+  .button {
+    border: 0;
+    padding: 9px 25px;
+    cursor: pointer;
+    background: #f82249;
+    color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 14px;
+    border-radius: 50px;
+  }
+  
+  .heading {
+    color: rgb(248, 82, 82);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    float: left;
+    font-size: 18px;
+  }
+  
+  img {
+    width: 800px;
+    height: 1000px;
+
+  }
+
+  #new {
+    align-self: center;
+    background-color: indianred;
+    border: 1px solid black;
+    border-radius: 45px;
+    margin-left: 40%;
+  }
+
+  #new:hover {
+    background-color: salmon;
+  }
+
+  p {
+    font-size: 6ch;
+    font-family: fantasy;
+    font-weight: 300;
+    align-self: center;
+    margin: 20px
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .wrapper {
+    background: #171c24;
+    position: relative;
+    width: 100%;
+  }
+
+  .wrapper nav {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .content {
+    display: flex;
+    align-items: center;
+  }
+
+  nav .content .links {
+    margin-left: 0px;
+    display: flex;
+  }
+
+  .content .logo a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .content .links li {
+
+    list-style: none;
+    line-height: 70px;
+  }
+
+  .content .links li a,
+  .content .links li label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+  }
+
+  .content .links li label {
+    display: none;
+  }
+
+  .content .links li a:hover,
+  .content .links li label:hover {
+    background: #323c4e;
+  }
+
+  .wrapper input[type="checkbox"] {
+    display: none;
+  }
+
+
+  /* Dropdown Menu code start */
+  .content .links ul {
+    position: absolute;
+    background: #171c24;
+    top: 80px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .content .links li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+
+  }
+
+  .content .links ul li a {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px !important;
+
+  }
+
+  .content .links ul li {
+    position: relative;
+  }
+
+  .content .links ul li:hover ul {
+    top: 0;
+  }
+
+  .page-width h2 {
+    align-self: center;
+  }
+
+  //Carousel
+  .carousel-inner{
+    align-items: center;
+  }
+  .carousel .carousel-item {
+    height: 400px;
+    // width: 1000px;
+    // padding-left: 100px;
+    // margin-left:150px;
+  }
+
+  .carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      // min-height: 500px;
+      width: 100%;
+      height: 500px;
+  }
+
+  .deals:hover{
+    img{
+      height: 210px;
+      width: 210px;
+      border-radius: 110px;
+    }
+    .deal-text{
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }

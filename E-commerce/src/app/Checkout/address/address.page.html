@@ -1,0 +1,145 @@
+<script src="payment.page.ts"></script>
+<ion-content>
+
+  <app-header></app-header>
+  <ion-grid style="padding: 0px 0px 20px 0px;">
+    <ion-row style="height: 30px; background-color: rgb(253, 192, 210, 0.5);" class="ion-justify-content-evenly">
+      <ion-col size="0.55">
+        <ion-text>Cart <ion-icon name="checkmark-circle" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="1.37">
+        <ion-text>Shipping Address <ion-icon name="radio-button-on" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="0.85">
+        <ion-text>Payment <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+      </ion-col>
+
+      <ion-col size="1.12">
+        <ion-text>Order Placed <ion-icon name="radio-button-off" class="icon"></ion-icon></ion-text>
+      </ion-col></ion-row>
+  </ion-grid>
+
+  <ion-grid style="padding-bottom: 40px;">
+    <ion-row class="ion-justify-content-evenly">
+
+    <ion-col size="6.5">
+      <ion-row>
+        <ion-text>Select Shipping Address</ion-text>
+      </ion-row>
+
+      <ion-row style="padding-top: 5px;">
+        <ion-button class="login-button" type="submit" (click)="openCart()">
+          <ion-icon name="add-circle-outline" style="padding-right: 5px;"></ion-icon>
+          Add New Adress
+        </ion-button>
+      </ion-row>
+
+<ion-radio-group >
+<ion-grid *ngIf='home.length!==0'>
+  <ion-row style="padding-top: 30px;"> 
+    <ion-text>Home Address</ion-text>
+  </ion-row>
+  <ion-row *ngFor="let address of home">
+    <ion-col size="0.4" style="padding-top: 20px;">
+   
+      <ion-radio id='btn1' style="--color-checked: #eb2963bb; --color: #eb2963bb; padding-right: 4px; padding-top: 4px;"
+      (click)="showAddress(address)"></ion-radio>
+    </ion-col>
+
+    <ion-col size="11">
+      <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col style="padding: 0px">
+              {{address.fName}} {{address.lName}} 
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            {{address.phone}}
+          </ion-row>
+          <ion-row>
+            {{address.line1}}, {{address.line2}}, 
+          </ion-row>
+          <ion-row>
+            {{address.line3}}, {{address.city}}, {{address.state}}
+          </ion-row>
+          <ion-row>
+            India - {{address.pincode}}
+          </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-grid>
+
+
+<ion-grid *ngIf='work.length!==0'>
+  <ion-row style="padding-top: 30px;"> 
+    <ion-text>Work Address</ion-text>
+  </ion-row>
+  <ion-row *ngFor="let address of work">
+    <ion-col size="0.4" style="padding-top: 20px;">
+      <ion-radio id='btn1' style="--color-checked: #eb2963bb; --color: #eb2963bb; padding-right: 4px; padding-top: 4px;"
+      (click)="showAddress(address)"></ion-radio>
+    </ion-col>
+
+    <ion-col size="11">
+      <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+        <ion-grid>
+          <ion-row>
+            {{address.fName}}  {{address.lName}} 
+          </ion-row>
+          <ion-row>
+            {{address.phone}}
+          </ion-row>
+          <ion-row>
+            {{address.line1}}, {{address.line2}}, 
+          </ion-row>
+          <ion-row>
+            {{address.line3}}, {{address.city}}, {{address.state}}
+          </ion-row>
+          <ion-row>
+            India - {{address.pincode}}
+          </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</ion-radio-group>
+</ion-col>
+
+      <ion-col size="4">
+        <ion-grid>
+          <ion-card *ngFor="let item of items" style="padding: 10px; box-shadow: 0px 0px 1.5px 1px #eb2963bb;">
+            <ion-row style="padding-left: 2px;">
+              <ion-col size="3.5">
+                <img src="{{item.image}}" style="height: 100px; width: 100px; border-radius: 15px;">
+                </ion-col>
+  
+                <ion-col style="padding-top: 50px;">
+                  <ion-text>Delivery by <b>August 16, 2021</b></ion-text>
+                </ion-col>
+            </ion-row>
+          </ion-card>
+  
+            <ion-row style="padding-top: 30px;">
+              
+              <ion-button class="pmt-button" type="submit" (click)='onSubmit()' [routerLink]="!checked() ? ['/payment'] : []">Proceed to Payment</ion-button>
+              <div id='check' style="color: red; padding-left: 12px;"></div>
+            </ion-row>
+             
+        </ion-grid>
+        </ion-col>
+  
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+<app-footer ></app-footer>
+</ion-footer>
+
+</ion-content>
+

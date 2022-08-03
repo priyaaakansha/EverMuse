@@ -1,0 +1,115 @@
+.text{
+    padding-left: 15px; 
+    padding-bottom: 7px;
+    cursor: pointer;
+    font-size: 17px;
+    color: rgba(0, 0, 0);
+    // font-family: "Montserrat", sans-serif;
+}
+
+.cat-txt{
+  font-size: 17px; 
+  font-weight: 500;
+}
+
+.icon{
+  float: right; 
+  padding-top: 3px;
+}
+
+.category{
+  height: 50px; 
+  width: 50px; 
+  border-radius: 35px;
+  filter: drop-shadow(2px 2px 2px #000000a9);
+}
+
+.text:hover{
+    padding-left: 15px; 
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    color: #eb2963;
+    // font-family: "Montserrat", sans-serif;
+}
+
+.h3{
+  size: 5px;
+  font-size: 5px;
+}
+
+#custom-search input.searchbar-input.sc-ion-searchbar-md{
+
+  padding-top: 0!important;
+
+  padding-bottom: 0!important;
+
+}
+// .searchbar-input
+// {
+//   --padding-top: 0px !important;
+//   padding-bottom: 0px !important;
+// }
+
+// #cart{
+//     position: absolute;
+//   }
+//   #cart-badge{
+//     position: relative;
+//   }
+
+  #notification-button {
+    position: relative;
+    width: 45px;
+    right: 1px;
+    overflow: visible!important;
+}
+
+#wishlist-button {
+  position: relative;
+  width: 45px;
+  right: 1px;
+  overflow: visible!important;
+}
+
+#cart-button {
+  position: relative;
+  width: 45px;
+  right: 1px;
+  overflow: visible!important;
+}
+
+#notifications-badge {
+    background-color: rgb(255, 66, 66);
+    position: absolute;
+    top: -0.0px;
+    right: -3px;
+    border-radius: 100%;
+}
+
+#wishlist-badge {
+  background-color: rgb(255, 66, 66);
+  position: absolute;
+  top: -0.0px;
+  right: -3px;
+  border-radius: 100%;
+}
+
+.grid{
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-bottom: 5px; 
+  padding-top: 5px;
+}
+
+.row{
+  padding-left: 10px
+}
+
+.col{
+  padding-top: 20px;
+}
+
+.img-col{
+  padding: 5px 0px 5px 0px;
+}

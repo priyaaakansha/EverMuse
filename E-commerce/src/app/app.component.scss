@@ -1,0 +1,13 @@
+body {
+    cursor: url('https://ionicframework.com/img/finger.png'), auto;
+  }
+  
+  .bar-extrasubheader {
+    height: 44px !important;
+    top: 88px !important;
+    display: block;
+  }
+  
+  .has-extrasubheader .scroll-content {
+    top: 132px;
+  }

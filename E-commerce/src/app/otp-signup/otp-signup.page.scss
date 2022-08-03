@@ -1,0 +1,143 @@
+// .ion-content {
+//     --background: url(../../assets/images/BgImages/otp-signup.jpg) 0 0/100% 100% no-repeat !important;
+//     background-color: #fff;
+//   }
+  
+//   // .inputs {
+//   //   color: #ffffff;
+//   //   // margin: auto;
+//   //   width: 100%;
+//   //   font-size: 20px;
+//   //   font-weight: 400;
+//   //   font-family: "Montserrat", sans-serif;
+//   //   // padding: 20px;
+//   // }
+  
+//   .inputs {
+//     color: rgba(255, 255, 255, 0.6);
+//     margin: auto;
+//     width: 100%;
+//     font-size: 18px;
+//     font-weight: 200;
+//     font-family: "Montserrat", sans-serif;
+//   }
+
+//   .login-button {
+//     color: #ffffff;
+//     font-weight: 400;
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 20px;
+//     // margin: auto;
+//     width: 100%;
+//     --background: #eb2963;
+//     --border-radius: 10px;
+//     --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+//     // padding-right: 30px;
+//     // padding-left: 30px;
+//   }
+  
+//   // .inputs2 {
+//   //   border-radius: 15px;
+//   //   // margin-top: 500px;
+//   //   text-align: left;
+//   //   background-color: rgba(214, 202, 202, 0.56);
+//   //   margin: auto;
+//   //   // padding-right: 70px;
+//   //   width: 100%;
+//   //   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+//   // }
+
+//   .inputs2 {
+//     border-radius: 15px;
+//     margin-top: 500px;
+//     font-size: 17px;
+//     text-align: left;
+//     background-color: rgba(214, 202, 202, 0.55);
+//     margin: auto;
+//     width: 100%;
+//     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+//     color: #ffffff;
+//     --placeholder-color: #ffffff;
+//     font-weight: 200; 
+//     --placeholder-opacity: 1;
+//   }
+  
+//   .content {
+//     color: #ffffff;
+//     text-align: left;
+//     font-size: 20px;
+//     font-family: "Montserrat", sans-serif;
+//     font-weight: 400;
+//   }
+   
+//   .card {
+//     border-radius: 35px;
+//     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+//     background-color: rgba(0,0,0,0.8);
+//     padding: 0px;
+//   }
+  
+//   // .ion-padding {
+//   //   --ion-padding: 30px;
+//   // }
+  
+.ion-content {
+  --background: url(../../assets/images/BgImages/otp-signup.jpg) 0 0/100% 100% no-repeat !important;
+  background-color: #fff;
+}
+
+.inputs {
+  // color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
+
+  margin: auto;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+}
+
+.login-button {
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  margin: auto;
+  width: 100%;
+  --background: #eb2963;
+  --border-radius: 10px;
+  --box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  // padding-right: 25px;
+  // padding-left: 25px;
+}
+
+.inputs2 {
+  border-radius: 15px;
+  margin-top: 500px;
+  text-align: left;
+  background-color: rgba(214, 202, 202, 0.56);
+  margin: auto;
+  width: 90%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 40px;
+}
+
+.content {
+  color: #eb2963;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+ 
+.card {
+  border-radius: 35px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0,0,0,0.8);
+}
+
+.ion-padding {
+  --ion-padding: 30px;
+}
+

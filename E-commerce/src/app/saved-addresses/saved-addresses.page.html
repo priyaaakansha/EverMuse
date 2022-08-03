@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<ion-content>
+
+  <ion-header>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-toolbar>
+      <ion-title>Saved Addresses</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+    <ion-grid style="padding-bottom: 40px;">
+      <ion-row class="ion-justify-content-evenly">
+  
+      <ion-col size="6">
+
+        <ion-row style="padding-top: 5px;">
+          <ion-button class="prim-btn" type="submit" (click)="openCart()">
+            <ion-icon name="add-circle-outline" style="padding-right: 5px;"></ion-icon>
+            Add New Adress
+          </ion-button>
+        </ion-row>
+  
+  <ion-grid *ngIf='home.length!==0'>
+    <ion-row style="padding-top: 30px; padding-left: 8px;"> 
+      <ion-text>Home Address</ion-text>
+    </ion-row>
+    <ion-row *ngFor="let address of home">
+  
+      <ion-col size="11" style="padding-left: 0px">
+        <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+          <ion-grid>
+            <ion-row>
+              {{address.fName}} {{address.lName}} 
+            </ion-row>
+            <ion-row>
+              {{address.phone}}
+            </ion-row>
+            <ion-row>
+              {{address.line1}}, {{address.line2}}, 
+            </ion-row>
+            <ion-row>
+              {{address.line3}}, {{address.city}}, {{address.state}}
+            </ion-row>
+            <ion-row>
+              India - {{address.pincode}}
+            </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+  
+  <ion-grid *ngIf='work.length!==0'>
+    <ion-row style="padding-top: 30px; padding-left: 8px;"> 
+      <ion-text>Work Address</ion-text>
+    </ion-row>
+    <ion-row *ngFor="let address of work">
+  
+      <ion-col size="11" style="padding-left: 0px">
+        <ion-card style="box-shadow: 0px 0px 2px 1px #eb2963bb; padding: 10px;">
+          <ion-grid>
+            <ion-row>
+              {{address.fName}}  {{address.lName}} 
+            </ion-row>
+            <ion-row>
+              {{address.phone}}
+            </ion-row>
+            <ion-row>
+              {{address.line1}}, {{address.line2}}, 
+            </ion-row>
+            <ion-row>
+              {{address.line3}}, {{address.city}}, {{address.state}}
+            </ion-row>
+            <ion-row>
+              India - {{address.pincode}}
+            </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  </ion-col>
+
+    <ion-col size="5">
+      <img src="../../assets/images/address.png">
+      </ion-col>
+    
+      </ion-row>
+    </ion-grid>
+  
+    <ion-footer>
+  <app-footer ></app-footer>
+  </ion-footer>
+  
+  </ion-content>
